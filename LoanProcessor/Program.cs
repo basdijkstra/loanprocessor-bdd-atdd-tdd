@@ -41,22 +41,7 @@ namespace LoanProcessor
 
         internal static string ProcessLoanApplication(LoanApplication loanApplication)
         {
-            if (loanApplication.LoanAmount <= 1000)
-            {
-                return "approved";
-            }
-
-            if (loanApplication.LoanAmount > 1000000)
-            {
-                return "denied";
-            }
-
-            if (loanApplication.DownPayment * 10 < loanApplication.LoanAmount)
-            {
-                return "denied";
-            }
-
-            return loanApplication.CreditStatusOk ? "approved" : "denied";
+            return "undefined";
         }
     }
 }
