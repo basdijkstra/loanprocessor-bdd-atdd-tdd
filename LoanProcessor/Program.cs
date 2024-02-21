@@ -41,16 +41,6 @@ namespace LoanProcessor
 
         internal static string ProcessLoanApplication(LoanApplication loanApplication)
         {
-            if (loanApplication.LoanAmount <= 0)
-            {
-                throw new ArgumentException("Loan amount should be a positive non-null integer");
-            }
-
-            if (loanApplication.DownPayment <= 0)
-            {
-                throw new ArgumentException("Down payment should be a positive non-null integer");
-            }
-
             if (loanApplication.LoanAmount <= 1000)
             {
                 return "approved";
